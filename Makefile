@@ -15,12 +15,13 @@ Sources += $(wildcard *.bib)
 %.bib: | resources/%.bib
 	$(CP) $| $@
 
-## Sources += inputs/*.pdf
+Sources += inputs/*.pdf
 inputs/%.pdf: resources/%.eps
 	$(convert)
 
 Sources += README.md
 
+Sources += $(wildcard *.tex)
 chapter.pdf: chapter.tex
 
 ######################################################################
